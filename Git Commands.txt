@@ -28,18 +28,18 @@ git remote add orgin http://github.com/xyz
 git pull origin main --allow-unrelated-histories
 	it is used if local and remote repository had different repository history
 
-git push origin main
-	to push local main repository to origin url. 
+git remote -v
 	shows all the remote url links. 
 
 git push origin main
+	to push local main repository to origin url. 
 	push the changes of local repository to remote repository
 
 git status 
 	to check the status of current repositoryg
 
 git rm --cached <filename>
-	to unstage the file name. 
+	to unstage the file name. s
 
 ---------------------------------------------------------------
 git branch
