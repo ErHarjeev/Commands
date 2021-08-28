@@ -1,0 +1,55 @@
+Get-ChildItem Env:
+	In PowerShell, to display all current environment variables on your PC
+
+set
+	In Command Prompt, to see all the environment variables
+
+set > filename.txt
+	to store all the variable names to a text file
+
+dir > filename.txt
+	to store all the directories to a text file.
+
+/* A lot of the environment variables are stored in the Registry. This means you can query them using the reg command */
+https://superuser.com/questions/1179433/how-to-list-global-environment-variables-separately-from-user-specific-environme
+
+reg query "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment"
+	These variables are common to all users
+
+reg query HKCU\Environment
+reg query "HKCU\Volatile Environment"
+	Above two are specific to current user session
+
+
+setx variable value
+	permanently set your own environment variable. It is stored in the registry but not made immediately available
+reg query "HKCU\Environment"
+
+set variable=value
+	the variable is available immediately but is not stored in the registry. 
+	You cannot use the reg command to list them although they are shown by set. 
+	These temporary environment variables do not persist after you end the command-prompt session.
+	
+
+/*
+Dynamic Variables are internal variables of cmd.exe. 
+So these variables are available only in a Windows command prompt window which is a running cmd.exe process 
+or a batch file processed by cmd.exe. The dynamic variables are not available in other executables or scripts 
+as these variables are not environment variables.
+
+The most common used dynamic variables are:
+
+CD
+	The current directory path not ending with a backlash, except the current directory is the root directory of the drive.
+DATE
+	The current local date in format as defined for the account in region and language settings of Windows.
+TIME
+	The current local time in format as defined for the account in region and language settings of Windows.
+ERRORLEVEL
+	Exit value of previously executed command or program.
+RANDOM
+	A random decimal number between 0 and 32767.
+*/
+
+
+	

@@ -1,0 +1,50 @@
+git --version
+	to check the version of git
+git 
+git  --help
+	git help 
+
+git config -- list
+	to check the config parameter
+
+git config --global user.email "er.harjeev@gmail.com"
+
+git config --global user.name "Harjeev
+
+git init
+	to initiate git repository in the folder
+	
+git init -b main
+	to inititate git repository as main branch.
+
+git add . 
+	Dot (.) is used to add the files to repository
+
+git commit -m "First Message"
+
+git remote add orgin http://github.com/xyz
+	origin is a variable that hold the url link. it can have any name.
+
+git pull origin main --allow-unrelated-histories
+	it is used if local and remote repository had different repository history
+
+git push origin main
+	to push local main repository to origin url. 
+	shows all the remote url links. 
+
+git push origin main
+	push the changes of local repository to remote repository
+
+git status 
+	to check the status of current repositoryg
+
+git rm --cached <filename>
+	to unstage the file name. 
+
+---------------------------------------------------------------
+git branch
+	to check the current branch
+
+git branch -M main
+	to rename the master branch as main
+--------------------------------------------------------------
